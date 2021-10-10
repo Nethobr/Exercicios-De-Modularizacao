@@ -1,71 +1,44 @@
 #include <stdio.h>								//bibliotéca padrão
 #include <math.h> 								//bibliotéca para operações matemáticas
-int procdEx1 ()
+
+int funcDecid (int x, int op)					//Função de decisão do menu
 {
-	//VARIÁVEIS
-	int 	a, b, c;
-	
-	//INÍCIO	
-	printf("Valor a: ");
-	scanf("%d", &a);
-	printf("Valor b: ");
-	scanf("%d", &b);
-	printf("Valor c: ");
-	scanf("%d", &c);
-	printf("\n");	
-
-	printf("Resultado: %d\n", funcEx1 (a, b, c));
-}
-
-int procdEx2 ()									//Procedimento ex2
-{
-	//VARIÁVEIS
-	int 	lin, col, res;
-
-	//INÍCIO	
-	printf("Número de linhas: ");
-	scanf("%d", &lin);
-	printf("Número de colunas: ");
-	scanf("%d", &col);
-	
-	funcEx2(lin, col);
-}
-
-int procdEx3 ()									//Procedimento ex3
-{
-	//VARIÁVEIS
-	int 		num;
-	
-	//INÍCIO	
-	printf("Informe o número: ");
-	scanf("%d", &num);
-	
-	printf("Resultado: %d\n", funcEx3 (num)); 
-	
-	//return num;
-}
-
-int procdEx4 ()									//Procedimento ex4
-{
-	//VARIÁVEIS
-	int 	num;
-	
-	//INÍCIO
-	printf("Informe o número: ");
-	scanf("%d", &num);
-	
-	if (num <= 0)
+	if (x == 1)
 	{
-		printf("Não aceitemos esse tipo de valor!\n");
+		op = 5;
+	}
+	else if (x == 0)
+	{
+			op = 0;
 	}
 	else
 	{
-	printf("Resultado: \n");
-	funcEx4 (num);
+		int veri = 0;
+		do
+		{
+			printf("Valor não computado, favor insira 1 ou 0: ");
+			scanf("%d", &x);
+			if(x == 1 || x == 0)
+			{
+				veri = 1;
+			}
+			else
+			{
+				veri = 0;
+			}
+		}while(veri != 1);
+		
+		op = veri * x;
+
+		if (op == 1)
+		{
+			op = 5;
+		}
 	}
+	return op;
 }
 
-int funcEx1 (int a, int b, int c)				//Função do ex1
+int funcEx1 (int a, int b, int c)				//Função ex1
 {
 	//VARIÁVEIS
 	int 	res;
@@ -166,41 +139,69 @@ int funcEx4 (int x)								//Função ex4
 	}
 }
 
-int funcDecid (int x, int op)					//Função de decisão do menu
+int procdEx1 ()									//Procedimento ex1
 {
-	if (x == 1)
+	//VARIÁVEIS
+	int 	a, b, c;
+	
+	//INÍCIO	
+	printf("Valor a: ");
+	scanf("%d", &a);
+	printf("Valor b: ");
+	scanf("%d", &b);
+	printf("Valor c: ");
+	scanf("%d", &c);
+	printf("\n");	
+
+	printf("Resultado: %d\n", funcEx1 (a, b, c));
+}
+
+int procdEx2 ()									//Procedimento ex2
+{
+	//VARIÁVEIS
+	int 	lin, col, res;
+
+	//INÍCIO	
+	printf("Número de linhas: ");
+	scanf("%d", &lin);
+	printf("Número de colunas: ");
+	scanf("%d", &col);
+	
+	funcEx2(lin, col);
+}
+
+int procdEx3 ()									//Procedimento ex3
+{
+	//VARIÁVEIS
+	int 		num;
+	
+	//INÍCIO	
+	printf("Informe o número: ");
+	scanf("%d", &num);
+	
+	printf("Resultado: %d\n", funcEx3 (num)); 
+	
+	//return num;
+}
+
+int procdEx4 ()									//Procedimento ex4
+{
+	//VARIÁVEIS
+	int 	num;
+	
+	//INÍCIO
+	printf("Informe o número: ");
+	scanf("%d", &num);
+	
+	if (num <= 0)
 	{
-		op = 5;
-	}
-	else if (x == 0)
-	{
-			op = 0;
+		printf("Não aceitemos esse tipo de valor!\n");
 	}
 	else
 	{
-		int veri = 0;
-		do
-		{
-			printf("Valor não computado, favor insira 1 ou 0: ");
-			scanf("%d", &x);
-			if(x == 1 || x == 0)
-			{
-				veri = 1;
-			}
-			else
-			{
-				veri = 0;
-			}
-		}while(veri != 1);
-		
-		op = veri * x;
-
-		if (op == 1)
-		{
-			op = 5;
-		}
+	printf("Resultado: \n");
+	funcEx4 (num);
 	}
-	return op;
 }
 
 int main()										//Main
