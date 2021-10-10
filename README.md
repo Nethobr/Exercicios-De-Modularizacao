@@ -15,8 +15,12 @@ Exercícios - Modularização do Professor Kristian Capeline
 3. Faça um algoritmo que leia 3 notas de um aluno e um quarto número que representa o modelo de média a ser calculada. Caso o modelo seja igual a 1, calcular a média aritmética; caso seja igual a 2, calcular a média ponderada com pesos iguais a 5, 3 e 2; caso seja igual a 3, calcular a média harmônica. Repetir este procedimento até que uma das notas informadas seja menor que 0. <br><br>
 ![image](https://user-images.githubusercontent.com/67654551/136674271-e9e608c4-5437-4509-b25c-f8b6a5f7c383.png)
 
+## 
+
 4. Você está desenvolvendo um jogo em 3 dimensões no estilo do Counter-Strike. Nesse momento do desenvolvimento é necessário criar uma função de colisão. Essa função deverá receber as coordenadas em 3 dimensões de 2 pontos e a função deve retornar se colidiu ou não (VERDADEIRO ou FALSO). Dessa forma, sua função servirá para as seguintes situações, por exemplo:<br><br>
 ![image](https://user-images.githubusercontent.com/67654551/136674307-ee509b4a-4b1f-4da2-852b-61f09073cb5c.png)
+
+##
 
 5. Desenvolva apenas UM algoritmo que, dependendo da opção que o usuário escolher, execute um dos exercícios abaixo. O programa só deve terminar quando o usuário escolher para sair. Abaixo o exemplo do menu: <br>
 1 – Exercício 1<br>
